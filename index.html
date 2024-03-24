@@ -142,7 +142,77 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告"><a href="#王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告" class="headerlink" title="王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告"></a>王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告</h1>
+        <h2 id="王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告"><a href="#王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告" class="headerlink" title="王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告"></a>王丽媛实验三（利用GitHub平台搭建个人博客网站）实验报告</h2><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><p>熟悉使用主流云平台并搭建个人博客或者网站。</p>
+<p>具体包括：</p>
+<p>参考方案：基于主流云平台，设计、实现个人博客或者网站的搭建，撰写实验报告（附带网站链接并可以访问），并在网站上呈现此次实验报告。</p>
+<h3 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a>硬件环境</h3><p>联网的计算机一台</p>
+<h3 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h3><p>Windows or Linux</p>
+<h3 id="实验步骤与内容"><a href="#实验步骤与内容" class="headerlink" title="实验步骤与内容"></a>实验步骤与内容</h3><p> 我想在GitHub上创建自己的个人博客，先放上我的个人博客网址：  <a target="_blank" rel="noopener" href="https://believemysel.github.io/">https://believemysel.github.io</a>  </p>
+<p>进入网页，滑到最下方就能看到我的第一篇博客了，按照要求，博客将呈现本次的实验报告内容。</p>
+<p>接下来，汇报一下我的实验过程：     </p>
+<h4 id="1、下载并安装好Node-js、Git和Hexo"><a href="#1、下载并安装好Node-js、Git和Hexo" class="headerlink" title="1、下载并安装好Node.js、Git和Hexo"></a>1、下载并安装好Node.js、Git和Hexo</h4><h5 id="（1）安装node-js和git"><a href="#（1）安装node-js和git" class="headerlink" title="（1）安装node.js和git"></a>（1）安装node.js和git</h5><p>这里，我直接去到官网，然后下载了最新版本2.44.0的node.js，然后全程默认next进行了安装。  Git也是从官网下载的，下载完成后进行了是否下载成功的检测：  </p>
+<img src="C:\Users\wly2003\AppData\Roaming\Typora\typora-user-images\image-20240324160559699.png" alt="image-20240324160559699" style="zoom:67%;" />
+
+<img src="C:\Users\wly2003\AppData\Roaming\Typora\typora-user-images\image-20240324160653425.png" alt="image-20240324160653425" style="zoom:65%;" />
+
+<p>  这里能够检索出版本号，说明都下载成功了；同时可以看到，右键后有git的两个运行方式了，这就是成功了。  </p>
+<h5 id="（2）安装、初始化Hexo"><a href="#（2）安装、初始化Hexo" class="headerlink" title="（2）安装、初始化Hexo"></a>（2）安装、初始化Hexo</h5><p>新建一个文件夹，我的文件夹叫single_blog在文件夹下右键打开git bash here，然后使用如下指令安装hexo：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g     </span><br><span class="line">$ npm install hexo-deployer-git --save   </span><br></pre></td></tr></table></figure>
+
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7BF27F8486-88D4-4C91-9F79-E20A15825CE8%7D" alt="img">  </p>
+<p>安装完成后，在文件夹下再建一个叫hexo的文件夹，在hexo文件夹下右键打开git bash here，然后进行hexo的初始化操作：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B4C384931-2D25-49B8-9E75-F87597566E41%7D" alt="img">  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7BF064CFED-5A0C-4F19-B4DA-8B5A942A8F16%7D" alt="img">  </p>
+<p>初始化完成后，hexo文件夹将如下：</p>
+<p>  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B3CDA4109-0181-4D04-AE22-D2BC50494B61%7D" alt="img">  </p>
+<p>接下来，先查看一下本地的个人博客网站效果。</p>
+<p>执行以下命令得到网站端口：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B9D46E8D0-48E9-4332-9F73-3392174E7064%7D" alt="img">  </p>
+<p>登录 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>  查看效果：  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B130B722E-89D4-49BA-A528-009FA89FE033%7D" alt="img">  </p>
+<h4 id="2、将博客部署到GitHub-Pages上"><a href="#2、将博客部署到GitHub-Pages上" class="headerlink" title="2、将博客部署到GitHub Pages上"></a>2、将博客部署到GitHub Pages上</h4><h5 id="（1）在GitHub上创建项目的代码库"><a href="#（1）在GitHub上创建项目的代码库" class="headerlink" title="（1）在GitHub上创建项目的代码库"></a>（1）在GitHub上创建项目的代码库</h5><p> <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B6F018E9D-0D51-47AE-916F-5276821F9320%7D" alt="img">  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B71C3E6CA-C7BF-4FA4-BB8F-D4A326C59655%7D" alt="img">  </p>
+<h5 id="（2）配置ssh密钥"><a href="#（2）配置ssh密钥" class="headerlink" title="（2）配置ssh密钥"></a>（2）配置ssh密钥</h5><p>在第一次建的文件夹下打开git，使用以下指令配置ssh密钥： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;2363453887@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>  （中间遇到任何问题直接回车即可）  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7BF4A63C8E-1CCC-4DA3-9B29-F2674197C191%7D" alt="img">  </p>
+<p>然后，使用以下指令复制ssh内容：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ clip &lt; ~/.ssh/id_rsa.pub  </span><br></pre></td></tr></table></figure>
+
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B25B43480-B89E-43F4-A7FC-409EE7B63B92%7D" alt="img">  </p>
+<h5 id="（3）在GitHub账户中添加ssh公钥-进入settings中："><a href="#（3）在GitHub账户中添加ssh公钥-进入settings中：" class="headerlink" title="（3）在GitHub账户中添加ssh公钥  进入settings中："></a>（3）在GitHub账户中添加ssh公钥  进入settings中：</h5><p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B469860FF-12CC-4CA8-A237-FFD4026B0B0D%7D" alt="img">  </p>
+<p>点击SSH and GPG keys:  </p>
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7BB9E118F9-ED18-430D-AB84-21CF38BF2EC8%7D" alt="img">  </p>
+<p>选择new SSH  key进行配置：  </p>
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B0CBB3CA5-3CA4-4267-B75C-942955F4AC1A%7D" alt="img">  </p>
+<h5 id="（4）进行配置测试"><a href="#（4）进行配置测试" class="headerlink" title="（4）进行配置测试"></a>（4）进行配置测试</h5><p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B3FCA8911-B4F2-4A9A-A4A4-34B7CABB6B2F%7D" alt="img">  </p>
+<h5 id="（5）配置git的个人信息"><a href="#（5）配置git的个人信息" class="headerlink" title="（5）配置git的个人信息"></a>（5）配置git的个人信息</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;此处填用户名&quot;     </span><br><span class="line">$  git config --global user.email &quot;此处填邮箱&quot;  </span><br></pre></td></tr></table></figure>
+
+<p>  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B5A5227B1-34CD-4915-B3C2-45C6B5CDC700%7D" alt="img"> </p>
+<h4 id="3、将本地的hexo文件更新到GitHub库中"><a href="#3、将本地的hexo文件更新到GitHub库中" class="headerlink" title="3、将本地的hexo文件更新到GitHub库中"></a>3、将本地的hexo文件更新到GitHub库中</h4><h5 id="（1）找到库中ssh的URL"><a href="#（1）找到库中ssh的URL" class="headerlink" title="（1）找到库中ssh的URL"></a>（1）找到库中ssh的URL</h5><p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B568094BE-F925-4A6D-B035-C5330EE13578%7D" alt="img">  </p>
+<h5 id="（2）找到hexo文件夹下的-config-yml文件进行配置："><a href="#（2）找到hexo文件夹下的-config-yml文件进行配置：" class="headerlink" title="（2）找到hexo文件夹下的_config.yml文件进行配置："></a>（2）找到hexo文件夹下的_config.yml文件进行配置：</h5><p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7BC3D1AA3C-3C61-46CB-A893-00054A6596C6%7D" alt="img">  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B3D91CF76-944B-42D4-91CD-D4D8A72B258D%7D" alt="img">  </p>
+<h5 id="（3）在hexo文件夹下打开git"><a href="#（3）在hexo文件夹下打开git" class="headerlink" title="（3）在hexo文件夹下打开git"></a>（3）在hexo文件夹下打开git</h5><p>​    执行指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>这里，我执行指令后报错了，显示是npm下载错误，再次使用下载语句进行npm的下载即可，然后再次执行上述指令，结果如下：  </p>
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B37ADCCAC-C6D4-47D4-8B60-6855E3545596%7D" alt="img">  </p>
+<p>此时，进入https;&#x2F;&#x2F;believemysel.github.io即可看到自己的个人博客了    </p>
+<h4 id="4、在博客上发表文章"><a href="#4、在博客上发表文章" class="headerlink" title="4、在博客上发表文章"></a>4、在博客上发表文章</h4><p>使用以下语句创建新文章：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n &quot;文章标题&quot;  </span><br></pre></td></tr></table></figure>
+
+<p>之后就会自动在\Hexo\source_posts 中生成 文章标题.md 文件</p>
+<p>  <img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B7AA97B1E-076F-4590-8F23-F0B76D45E7AF%7D" alt="img">  </p>
+<p>然后使用markdown编辑器对文档内容进行编辑：  </p>
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B7824B60C-B6BA-4292-8281-3E5535AF0956%7D" alt="img">  </p>
+<p>保存后使用以下语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
+
+<p>将文档内容push进网站中，然后打开网站即可看到push进的内容：  </p>
+<p><img src="file:///C:/Users/wly2003/AppData/Local/Microsoft/Windows/Clipboard/HistoryData/%7B76A9E735-288C-41A6-AC27-F7E094417D6D%7D/%7BF7E8293C-D12F-47EF-B9DE-882122A81EEF%7D/ResourceMap/%7B477DBAA2-7D2E-41EE-9858-ABFD0061DA6B%7D" alt="img">  </p>
+<h3 id="结论分析与体会"><a href="#结论分析与体会" class="headerlink" title="结论分析与体会"></a>结论分析与体会</h3><p>通过本次实验，我感受到了云平台的强大功能，也切实感受到了云平台能给我们带来什么，又是多么的方便。同时，之前一直以为GitHub只是个代码仓库，没想到还有这样的功能，这让我眼前一亮。</p>
+<p>很期待以后在云平台上进行更多的实验操作和体验！             </p>
+
       
     </div>
     <footer class="article-footer">
